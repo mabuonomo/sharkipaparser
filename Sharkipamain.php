@@ -59,7 +59,7 @@ class Sharkipamain {
         if (file_exists($this->path_plist)) {
             $xml = simplexml_load_file($this->path_plist);
 
-            echo '<br><br>' . json_encode($xml); //Simple Calculator
+            echo '<br><br>' . nl2br(json_encode($xml, JSON_PRETTY_PRINT)); //Simple Calculator
         } else {
             exit('Failed to open test.xml.');
         }
