@@ -1,0 +1,7 @@
+{
+    "name": "sharksoft/sharkipaparser",
+    "description": "A simple php library to parse the Apple IPA's plist",
+    "require": {
+        "php": "^5.3.3 || ^7.0"
+    }
+}
