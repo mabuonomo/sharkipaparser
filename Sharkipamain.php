@@ -19,20 +19,18 @@ class Sharkipamain {
 
     protected $path_ipa; // = '';
     protected $path_tmp = 'unzip/ipa/';
+    protected $path_plist; // = '';
 
     function load_ipa($path) {
         $this->path_ipa = $path;
-//        echo $this->path_ipa;
 
         $zip = new ZipArchive;
 
-//        session_start();
-//        $a = session_id();
-//        echo $a;
-        $this->path_tmp .= session_id() . "/";
+        $time = str_replace(".", "", microtime());
+        $time = str_replace(" ", "", $time);
+        $this->path_tmp .= session_id() . "/" . $time . "/";
 
-        echo $this->path_tmp;
-//        echo session_id();
+//        echo $this->path_tmp;
 
         if (!file_exists($this->path_tmp))
             mkdir($this->path_tmp, 0777, true);
@@ -48,9 +46,23 @@ class Sharkipamain {
         $folder_payload = scandir($this->path_tmp, 1)[0];
         $folder_app = scandir($this->path_tmp . $folder_payload, 1)[0];
         $contents = scandir($this->path_tmp . $folder_payload . "/" . $folder_app, 1);
-        echo json_encode($contents);
-        
-        
+//        echo json_encode($contents);
+
+        $this->path_plist = $this->path_tmp . $folder_payload . "/" . $folder_app . "/Info.plist";
+
+        echo 'Plist: ' . $this->path_plist;
+
+        return $contents; // lista di file contenuti nel pacchetto
+    }
+
+    function read_plist() {
+        if (file_exists($this->path_plist)) {
+            $xml = simplexml_load_file($this->path_plist);
+
+            echo '<br><br>' . json_encode($xml); //Simple Calculator
+        } else {
+            exit('Failed to open test.xml.');
+        }
     }
 
 }
