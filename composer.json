@@ -1,7 +1,15 @@
 {
     "name": "sharksoft/sharkipaparser",
     "description": "A simple php library to parse the Apple IPA's plist",
+    "minimum-stability": "dev",
     "require": {
-        "php": "^5.3.3 || ^7.0"
-    }
+        "php": ">=5.3",
+        "rodneyrehm/plist": "master"
+    },
+    "authors": [
+        {
+            "name": "Mario Buonomo",
+            "email": "ma.buonomo@gmail.com"
+        }
+    ]
 }
