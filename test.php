@@ -10,4 +10,4 @@ require_once 'sharkipamain.php';
 
 $shark = new Sharkipamain();
 
-$shark->load_ipa('C:\Users\mario\Google Drive\LipidTalk.ipa');
+$shark->load_ipa('C:\Users\mario\Desktop\.ipa');
