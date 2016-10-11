@@ -5,9 +5,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+session_start();
 
 require_once 'sharkipamain.php';
 
 $shark = new Sharkipamain();
 
-$shark->load_ipa('C:\Users\mario\Desktop\.ipa');
+$shark->load_ipa('C:\Users\mario\Desktop\LipidTalk.ipa');
