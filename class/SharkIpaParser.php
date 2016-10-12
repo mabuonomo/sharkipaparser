@@ -65,9 +65,9 @@ class SharkIpaParserHelper {
             require_once(__DIR__ . '/../vendor/rodneyrehm/plist/classes/CFPropertyList/CFPropertyList.php');
             $plist = new \CFPropertyList\CFPropertyList($this->path_plist);
 
-            echo '<pre>';
-            var_dump($plist->toArray());
-            echo '</pre>';
+//            echo '<pre>';
+//            var_dump($plist->toArray());
+//            echo '</pre>';
 
             $plist = $plist->toArray();
 
