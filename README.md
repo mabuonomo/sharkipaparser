@@ -66,4 +66,6 @@ this way:
 echo $array_plist['CFBundleName'];
 ```
 
+Output: "AppName"
+
 #enjoy ;)
