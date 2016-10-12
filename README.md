@@ -14,6 +14,7 @@ Add this library at your composer.json
 ...
 ```
 
+Then
 ```php
 composer install
 ```
