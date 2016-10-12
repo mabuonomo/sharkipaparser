@@ -66,3 +66,4 @@ this way:
 echo $array_plist['CFBundleName'];
 ```
 
+#enjoy ;)
