@@ -46,3 +46,11 @@ array (size=34)
   'CFBundleSupportedPlatforms' => 
 ...
 ```
+
+The structure is key => value, for example you can access at CFBundleName in
+this way:
+
+```php
+echo $array_plist['CFBundleName'];
+```
+
