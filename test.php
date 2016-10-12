@@ -7,9 +7,9 @@
  */
 session_start();
 
-require_once 'sharkipamain.php';
+require_once 'class/SharkIpaParser.php';
 
-$shark = new Sharkipamain();
+$shark = new SharkIpaParser\SharkIpaParserHelper();
 
 $shark->load_ipa('C:\Users\mario\Desktop\test.ipa');
 $shark->read_plist();
