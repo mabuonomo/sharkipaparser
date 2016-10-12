@@ -3,6 +3,17 @@
 A simple php library to parse the Apple IPA's plist
 
 #Installation
+Add this library at your composer.json
+```json    
+...
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3",
+        sharksoft/sharkipaparser: "master"
+    },
+...
+```
+
 ```php
 composer install
 ```
