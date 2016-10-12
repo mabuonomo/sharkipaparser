@@ -71,6 +71,9 @@ class Sharkipamain {
         echo '<pre>';
         var_dump($plist->toArray());
         echo '</pre>';
+        
+        $plist = $plist->toArray();
+        echo 'Cap: ' . $plist['UIRequiredDeviceCapabilities'][0];
     }
 
 }
