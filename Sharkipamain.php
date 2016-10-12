@@ -56,13 +56,21 @@ class Sharkipamain {
     }
 
     function read_plist() {
-        if (file_exists($this->path_plist)) {
-            $xml = simplexml_load_file($this->path_plist);
+//        if (file_exists($this->path_plist)) {
+//            $xml = simplexml_load_file($this->path_plist);
+//
+//            echo '<br><br>' . nl2br(json_encode($xml, JSON_PRETTY_PRINT)); //Simple Calculator
+//        } else {
+//            exit('Failed to open test.xml.');
+//        }
 
-            echo '<br><br>' . nl2br(json_encode($xml, JSON_PRETTY_PRINT)); //Simple Calculator
-        } else {
-            exit('Failed to open test.xml.');
-        }
+        require_once(__DIR__ . '/vendor/rodneyrehm/plist/classes/CFPropertyList/CFPropertyList.php'); // __DIR__ . '/../classes/CFPropertyList/CFPropertyList.php');
+        echo __DIR__ . '\unzip\ipa\5s93akbfbrtkm33gmtbk85ecs5\0011726001476257395\Payload\LipidTalk.app\Info.plist';
+        $plist = new CFPropertyList\CFPropertyList($this->path_plist);//, CFPropertyList::FORMAT_AUTO);
+
+        echo '<pre>';
+        var_dump($plist->toArray());
+        echo '</pre>';
     }
 
 }
