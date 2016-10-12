@@ -9,7 +9,7 @@ Add this library at your composer.json
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.3",
-        sharksoft/sharkipaparser: "master"
+        "sharksoft/sharkipaparser": "master"
     },
 ...
 ```
