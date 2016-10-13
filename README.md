@@ -65,7 +65,8 @@ this way:
 ```php
 echo $array_plist['CFBundleName'];
 ```
-
+```
 Output: "AppName"
+```
 
 #enjoy ;)

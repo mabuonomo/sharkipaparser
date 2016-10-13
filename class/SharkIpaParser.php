@@ -6,6 +6,11 @@ ini_set('display_startup_errors', 1);
 ini_set('display_errors', 1);
 error_reporting(-1);
 
+//load namespace from vendor by composer
+require __DIR__ . '/../vendor/autoload.php';
+
+use CFPropertyList;
+
 /**
  * Description of SharkIpaParserHelper
  *
@@ -55,9 +60,7 @@ class SharkIpaParserHelper {
     function read_plist() {
 
         try {
-            require_once(__DIR__ . '/../vendor/rodneyrehm/plist/classes/CFPropertyList/CFPropertyList.php');
             $plist = new \CFPropertyList\CFPropertyList($this->path_plist);
-
 //            echo '<pre>';
 //            var_dump($plist->toArray());
 //            echo '</pre>';
