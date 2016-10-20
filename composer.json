@@ -11,5 +11,10 @@
             "name": "Mario Buonomo",
             "email": "ma.buonomo@gmail.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "Sharkipaparser\\" :  "class/"
+        }
+    }
 }
