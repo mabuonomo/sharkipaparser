@@ -1,4 +1,6 @@
-<?php //
+<?php
+
+//
 
 namespace SharkIpaParser;
 
@@ -14,6 +16,10 @@ class SharkIpaParserHelper {
     protected $path_ipa; // = '';
     protected $path_tmp = 'unzip/ipa/';
     protected $path_plist; // = '';
+
+    public function __construct() {
+//                $this->::__construct();
+    }
 
     function load_ipa($path) {
         try {
