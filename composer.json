@@ -13,8 +13,8 @@
         }
     ],
     "autoload": {
-        "psr-0": {
-            "SharkIpaParser\\": "sharksoft/class/"
+        "psr-4": {
+            "SharkIpaParser\\": "class/"
         }
     }
 }
