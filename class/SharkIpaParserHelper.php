@@ -45,7 +45,7 @@ class SharkIpaParserHelper {
                 return false;
             }
 
-            $folder_payload = scandir($this->path_tmp, 1)[0];
+            $folder_payload = 'Payload';//scandir($this->path_tmp, 1)[0];
             $folder_app = scandir($this->path_tmp . $folder_payload, 1)[0];
             $contents = scandir($this->path_tmp . $folder_payload . "/" . $folder_app, 1);
 
