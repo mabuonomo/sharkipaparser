@@ -13,6 +13,6 @@ use sharkipaparser;
 //use SharkIpaParser as Shark;
 
 $shark = new sharkipaparser\SharkIpaParserHelper();
-
-$shark->load_ipa('C:\Users\mario\Desktop\test.ipa');
+ 
+$shark->load_ipa("/home/mario/Scrivania/","test.ipa", "/home/mario/git/sharkipaparser/public/unzip/");  
 echo $shark->read_plist()['CFBundleName'];

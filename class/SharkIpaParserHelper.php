@@ -14,22 +14,22 @@ use CFPropertyList;
 class SharkIpaParserHelper {
 
     protected $path_ipa; // = '';
-    protected $path_tmp = 'unzip/ipa/';
+    protected $path_tmp = '';//public/unzip/ipa/';
     protected $path_plist; // = '';
 
     public function __construct() {
 //                $this->::__construct();
     }
 
-    function load_ipa($path) {
+    function load_ipa($path, $name_ipa, $output) {
         try {
-            $this->path_ipa = $path;
+            $this->path_ipa = $path . $name_ipa;
 
             $zip = new \ZipArchive();
 
             $time = str_replace(".", "", microtime());
             $time = str_replace(" ", "", $time);
-            $this->path_tmp .= session_id() . "/" . $time . "/";
+            $this->path_tmp = $output;//$path;//.= session_id() . "/" . $time . "/";
 
 //        echo $this->path_tmp;
 
@@ -42,6 +42,7 @@ class SharkIpaParserHelper {
                 $zip->close();
             } else {
                 echo 'Error: ' . $zip->open($this->path_ipa);
+                return false;
             }
 
             $folder_payload = scandir($this->path_tmp, 1)[0];
