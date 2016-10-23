@@ -2,7 +2,7 @@
 
 //
 
-namespace SharkIpaParser;
+namespace sharkipaparser;
 
 use CFPropertyList;
 
