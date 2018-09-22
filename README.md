@@ -1,4 +1,6 @@
 # SharkIpaParser
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fmabuonomo%2Fsharkipaparser.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fmabuonomo%2Fsharkipaparser?ref=badge_shield)
+
 
 A simple php library to parse the Apple IPA's plist
 
@@ -70,3 +72,6 @@ Output: "AppName"
 ```
 
 #enjoy ;)
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fmabuonomo%2Fsharkipaparser.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fmabuonomo%2Fsharkipaparser?ref=badge_large)
